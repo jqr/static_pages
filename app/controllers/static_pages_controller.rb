@@ -1,3 +1,3 @@
-class StaticsController < ApplicationController
+class StaticPagesController < ApplicationController
 
 end
