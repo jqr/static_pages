@@ -1,0 +1,29 @@
+= Static Pages
+
+Provides an area to store your static pages that still need to be rendered
+with the application layout. You also get short routes to any template placed
+in the directory.
+
+Ideal for pages like:
+
+* Homepage
+* Contact Us
+* Privacy Policy
+* Terms of Service
+* Error pages
+
+== Install 
+
+  script/plugin install git://github.com/jqr/static_pages.git
+  
+== Usage
+
+Once installed the plugin will create a folder app/views/static_pages/ for keeping
+of your static pages. Requests that aren't handled by your other routes will
+fall back to looking for a template in static_pages.
+
+  home.html.erb            # accessible via /home
+  contact_us.html.erb      # accessible via /contact_us
+  
+
+Copyright (c) 2009 Elijah Miller, released under the MIT license
