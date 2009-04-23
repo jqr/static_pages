@@ -12,6 +12,9 @@ Ideal for pages like:
 * Terms of Service
 * Error pages
 
+Error pages will automatically be sought out in the static_pages directory with
+a fallback to the standard Rails behavior.
+
 == Install 
 
   script/plugin install git://github.com/jqr/static_pages.git
@@ -22,8 +25,16 @@ Once installed the plugin will create a folder app/views/static_pages/ for keepi
 of your static pages. Requests that aren't handled by your other routes will
 fall back to looking for a template in static_pages.
 
-  home.html.erb            # accessible via /home
-  contact_us.html.erb      # accessible via /contact_us
-  
+  home.html.erb            # site.com/home
+  contact_us.html.erb      # site.com/contact_us
+  500.html.erb             # site.com/500 and when your app gives a 500 error
+
+You can easily test the error pages in development mode by adding this method
+to your ApplicationController.
+
+  def rescue_action(exception)
+    rescue_action_in_public(exception)
+  end
+
 
 Copyright (c) 2009 Elijah Miller, released under the MIT license
