@@ -1,4 +1,4 @@
-class ApplicationController < ActionController::Base
+module StaticPages
   private
   
   def render_optional_error_file(status)
