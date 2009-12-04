@@ -36,5 +36,9 @@ to your ApplicationController.
     rescue_action_in_public(exception)
   end
 
+== Docs
 
-Copyright (c) 2009 Elijah Miller, released under the MIT license
+http://rdoc.info/projects/jqr/static_pages
+
+Homepage:: http://github.com/jqr/static_pages
+License:: Copyright (c) 2008 Elijah Miller <mailto:elijah.miller@gmail.com>, released under the MIT license
